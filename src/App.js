@@ -4,16 +4,20 @@ import Header from './Pages/Shared/Header/Header';
 import Home from './Pages/Home/Home';
 import Product from './Pages/Products/Product/Product';
 import Products from './Pages/Products/Products/Products';
+import UpdateProduct from './Pages/Products/UpdateProduct/UpdateProduct';
+import AddProuct from './Pages/Products/AddProduct/AddProuct';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header/>
+        <Header />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/products" component={Products} exact />
-          <Route path="/product/:productID" component={Product} />
+          <Route path="/products" component={Products} />
+          <Route path="/product" component={Product} exact />
+          <Route path="/addProduct" component={AddProuct} />
+          <Route path="/product/:productID" component={UpdateProduct} />
         </Switch>
       </BrowserRouter>
     </div>
