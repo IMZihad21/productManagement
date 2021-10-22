@@ -23,14 +23,13 @@ const AddProuct = () => {
         }
 
         const serverAPI = "http://localhost:5000/product";
-        axios
-            .post(serverAPI, product)
+        axios.post(serverAPI, product)
             .then((response) => {
                 if (response.data?.acknowledged) {
                     alert('Product added to database')
                     e.target.reset();
                 }
-                else{
+                else {
                     alert('Failed to add to database')
                 }
             });
