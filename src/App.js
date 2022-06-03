@@ -9,7 +9,7 @@ import AddProuct from './Pages/Products/AddProduct/AddProuct';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/productManagement'>
         <Header />
         <Switch>
           <Route path="/" component={Home} exact />
